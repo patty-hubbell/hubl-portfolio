@@ -7,8 +7,9 @@
   --warm: #d1495b;
   --light: #edae49;
   --white: #fff;
-  --black: #353535;
-  --black-hover: #404040;
+  --dark: #353535;
+  --dark-hover: #404040;
+  --black: #202020;
 }
 
 body {
@@ -16,16 +17,27 @@ body {
   padding: 0;
 }
 
-main {
-  background-color: var(--background);
+.screen-flex-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+}
+
+.intro-screen {
+  background: rgb(48, 99, 142);
+  background: linear-gradient(
+    135deg,
+    rgba(48, 99, 142, 1) 0%,
+    rgba(0, 61, 91, 1) 35%,
+    rgba(0, 28, 42, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   margin-left: 5rem;
 }
 
 .navbar {
-  background-color: var(--black);
+  background-color: var(--dark);
   width: 5rem;
   height: 100vh;
   position: fixed;
@@ -70,7 +82,7 @@ main {
 }
 
 .nav-link:hover {
-  background-color: var(--black-hover);
+  background-color: var(--dark-hover);
   filter: grayscale(0%) opacity(1);
 }
 
@@ -117,7 +129,7 @@ main {
 
 .screen-text-area {
   align-items: center;
-  background-color: var(--black);
+  background-color: var(--dark);
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   display: flex;
@@ -126,6 +138,13 @@ main {
   height: 100%;
   justify-content: center;
   width: 100%;
+}
+
+.screen-name,
+.screen-title,
+.screen-school,
+.screen-connect-button {
+  filter: opacity(1);
 }
 
 .screen-name {
@@ -194,4 +213,86 @@ main {
 
 .button-max {
   background-color: var(--secondary);
+}
+
+.chevron-down {
+  color: var(--white);
+  filter: opacity(0.7);
+  font-size: 3rem;
+  margin: auto;
+}
+
+.about-screen {
+  align-items: center;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  margin-left: 5rem;
+}
+
+.about-image-and-text {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.about-text-container {
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  width: 50rem;
+}
+
+.about-title {
+  color: var(--white);
+  font-family: "Do Hyeon", sans-serif;
+  font-size: 3.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.about-image {
+  position: relative;
+  margin-right: 3rem;
+}
+
+.about-real-pic {
+  border-radius: 50%;
+  width: 12rem;
+}
+
+.about-cartoon-pic {
+  border-radius: 50%;
+  filter: opacity(0);
+  left: 0;
+  position: absolute;
+  width: 12rem;
+  transition: 500ms ease;
+}
+
+.about-cartoon-pic:hover {
+  filter: opacity(1);
+}
+
+.about-bar-top,
+.about-bar-bottom {
+  background: rgb(237, 174, 73);
+  background: linear-gradient(
+    90deg,
+    rgba(237, 174, 73, 1) 0%,
+    rgba(0, 121, 140, 1) 70%,
+    rgba(48, 99, 142, 1) 100%
+  );
+  height: 0.4rem;
+  width: 90%;
+}
+
+.about-bar-top {
+  margin-bottom: 5rem;
+}
+
+.about-bar-bottom {
+  margin-top: 5rem;
 }
