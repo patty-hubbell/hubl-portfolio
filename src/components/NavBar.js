@@ -13,34 +13,45 @@ export default function NavBar() {
     <nav className="navbar">
       <ul className="navbar-nav">
         <li className="nav-item">
-          <Link>
-            <FontAwesomeIcon icon={faHome} />
+          <h1 className="logo">hubl</h1>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/">
+            <FontAwesomeIcon className="icon" icon={faHome} />
             <span className="link-text">Home</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link>
-            <FontAwesomeIcon icon={faAddressCard} />
+          <Link className="nav-link" to="/about/">
+            <FontAwesomeIcon className="icon" icon={faAddressCard} />
             <span className="link-text">About</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link>
-            <FontAwesomeIcon icon={faProjectDiagram} />
+          <Link className="nav-link" to="/projects/">
+            <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
             <span className="link-text">Projects</span>
           </Link>
         </li>
         <li className="nav-item">
-          <Link>
-            <FontAwesomeIcon icon={faGithub} />
+          <a
+            className="nav-link"
+            href="https://github.com/pat-hubbell"
+            target="_blank"
+          >
+            <FontAwesomeIcon className="icon" icon={faGithub} />
             <span className="link-text">GitHub</span>
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link>
-            <FontAwesomeIcon icon={faLinkedin} />
+          <a
+            className="nav-link"
+            href="https://linkedin.com/in/patrick-hubbell"
+            target="_blank"
+          >
+            <FontAwesomeIcon className="icon" icon={faLinkedin} />
             <span className="link-text">LinkedIn</span>
-          </Link>
+          </a>
         </li>
       </ul>
     </nav>
