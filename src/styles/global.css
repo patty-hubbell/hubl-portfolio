@@ -9,6 +9,7 @@
   --white: #fff;
   --dark: #353535;
   --dark-hover: #404040;
+  --dark-opaque: rgba(53, 53, 53, 0.7);
   --black: #202020;
 }
 
@@ -42,6 +43,7 @@ body {
   height: 100vh;
   position: fixed;
   transition: width 300ms ease;
+  z-index: 1;
 }
 
 .navbar:hover {
@@ -129,11 +131,10 @@ body {
 
 .screen-text-area {
   align-items: center;
-  background-color: var(--dark);
+  background-color: var(--dark-opaque);
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   display: flex;
-  filter: opacity(0.8);
   flex-direction: column;
   height: 100%;
   justify-content: center;
@@ -245,6 +246,10 @@ body {
   width: 50rem;
 }
 
+.about-tech {
+  color: var(--light);
+}
+
 .about-title {
   color: var(--white);
   font-family: "Do Hyeon", sans-serif;
@@ -290,9 +295,9 @@ body {
 }
 
 .about-bar-top {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 .about-bar-bottom {
-  margin-top: 5rem;
+  margin-top: 4rem;
 }

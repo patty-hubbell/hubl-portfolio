@@ -16,16 +16,16 @@ export default function NavBar() {
           <h1 className="logo">hubl</h1>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/">
+          <a className="nav-link" data-scroll href="#home">
             <FontAwesomeIcon className="icon" icon={faHome} />
             <span className="link-text">Home</span>
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
-          <Link className="nav-link" to="/about/">
+          <a className="nav-link" data-scroll href="#about">
             <FontAwesomeIcon className="icon" icon={faAddressCard} />
             <span className="link-text">About</span>
-          </Link>
+          </a>
         </li>
         <li className="nav-item">
           <Link className="nav-link" to="/projects/">

@@ -4,7 +4,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 
 export default function IntroScreen() {
   return (
-    <div className="intro-screen">
+    <div className="intro-screen" id="home">
       <div className="screen">
         <div className="screen-bar">
           <span className="button-exit" />
