@@ -63,9 +63,9 @@ body {
 .screen {
   display: flex;
   flex-direction: column;
-  height: 35rem;
+  height: 75%;
   margin: auto;
-  width: 50rem;
+  width: 75%;
 }
 
 .screen-bar {
@@ -74,7 +74,7 @@ body {
   border-top-left-radius: 7px;
   border-top-right-radius: 7px;
   display: flex;
-  height: 2rem;
+  min-height: 2rem;
   justify-content: flex-start;
   margin-top: 0;
   width: 100%;
@@ -94,9 +94,8 @@ body {
 
 .screen-name,
 .screen-title,
-.screen-school,
-.screen-connect-button {
-  filter: opacity(1);
+.screen-school {
+  text-align: center;
 }
 
 .screen-name {
@@ -130,9 +129,25 @@ body {
   font-family: "Do Hyeon", sans-serif;
   font-size: 1.5rem;
   height: 4rem;
+  margin-bottom: 1rem;
   margin-top: 4rem;
   transition: 200ms ease;
   width: 14rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .screen-connect-button {
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 12rem;
+  }
+  .screen-name {
+    font-size: 2.5rem;
+  }
+  .screen-title,
+  .screen-school {
+    font-size: 1.2rem;
+  }
 }
 
 .screen-connect-button a {
