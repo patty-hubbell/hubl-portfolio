@@ -34,7 +34,30 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  margin-left: 5rem;
+}
+
+/* Large screens */
+@media only screen and (min-width: 600px) {
+  .intro-screen {
+    margin-left: 5rem;
+  }
+}
+
+.icon {
+  color: var(--light);
+  font-size: 1.5rem;
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+
+.hamburger {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.mobile-icon {
+  color: var(--white);
+  font-size: 1.5rem;
 }
 
 .screen {
