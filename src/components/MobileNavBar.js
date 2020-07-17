@@ -34,13 +34,13 @@ export default function MobileNavBar() {
           </MobileNav.Link>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#home">
+          <MobileNav.Link href="#about">
             <FontAwesomeIcon className="mobile-icon" icon={faAddressCard} />
             <MobileNav.LinkText className="link-text">About</MobileNav.LinkText>
           </MobileNav.Link>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#home">
+          <MobileNav.Link href="#">
             <FontAwesomeIcon className="mobile-icon" icon={faProjectDiagram} />
             <MobileNav.LinkText className="link-text">
               Projects
@@ -48,7 +48,7 @@ export default function MobileNavBar() {
           </MobileNav.Link>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#home">
+          <MobileNav.Link href="https://github.com/pat-hubbell" target="_blank">
             <FontAwesomeIcon className="mobile-icon" icon={faGithub} />
             <MobileNav.LinkText className="link-text">
               GitHub
@@ -56,7 +56,10 @@ export default function MobileNavBar() {
           </MobileNav.Link>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#home">
+          <MobileNav.Link
+            href="https://linkedin.com/in/patrick-hubbell"
+            target="_blank"
+          >
             <FontAwesomeIcon className="mobile-icon" icon={faLinkedin} />
             <MobileNav.LinkText className="link-text">
               LinkedIn
