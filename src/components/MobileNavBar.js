@@ -12,10 +12,12 @@ import styled from "styled-components"
 const handleClick = () => {
   var links = document.getElementById("links")
 
-  if (links.style.display === "block") {
-    links.style.display = "none"
+  if (links.style.visibility === "visible") {
+    links.style.opacity = "0"
+    links.style.visibility = "hidden"
   } else {
-    links.style.display = "block"
+    links.style.visibility = "visible"
+    links.style.opacity = "1"
   }
 }
 
@@ -104,12 +106,14 @@ const MobileNav = {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     bottom: 3rem;
-    display: none;
     list-style: none;
     margin: 0;
+    opacity: 0;
     padding: 0;
     position: absolute;
-    right: 1.5rem;
+    right: 0;
+    transition: 500ms ease;
+    visibility: hidden;
     z-index: 1;
   `,
   ListItem: styled.li`
