@@ -188,7 +188,7 @@ body {
 
   .screen {
     height: 20rem;
-    width: 80%;
+    width: 75%;
   }
   .screen-connect-button {
     font-size: 1.2rem;
@@ -234,7 +234,7 @@ body {
 @media only screen and (min-width: 600px) and (max-width: 899px) {
   .screen {
     height: 25rem;
-    width: 80%;
+    width: 75%;
   }
 
   .screen-connect-button {
@@ -272,7 +272,7 @@ body {
 @media only screen and (min-width: 900px) {
   .screen {
     height: 30rem;
-    width: 80%;
+    width: 65%;
   }
 
   .screen-connect-button {
