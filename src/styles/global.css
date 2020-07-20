@@ -11,6 +11,8 @@
   --dark-hover: #404040;
   --dark-opaque: rgba(53, 53, 53, 0.7);
   --black: #202020;
+  --title-font: "Do Hyeon", sans-serif;
+  --text-font: "Sora", sans-serif;
 }
 
 body {

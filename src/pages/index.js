@@ -5,6 +5,7 @@ import IntroScreen from "../screens/IntroScreen"
 import AboutScreen from "../screens/AboutScreen"
 import ScreenFlexContainer from "../components/ScreenFlexContainer"
 import MobileNavBar from "../components/MobileNavBar"
+import ProjectsScreen from "../screens/ProjectsScreen"
 
 export default function Home() {
   const [windowDimension, setWindowDimension] = useState(null)
@@ -30,6 +31,7 @@ export default function Home() {
       <ScreenFlexContainer>
         <IntroScreen />
         <AboutScreen />
+        <ProjectsScreen />
       </ScreenFlexContainer>
     </>
   )

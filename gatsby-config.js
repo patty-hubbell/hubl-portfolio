@@ -14,7 +14,7 @@ module.exports = {
             family: `Do Hyeon`,
           },
           {
-            family: `Noto Sans`,
+            family: `Sora`,
           },
         ],
       },

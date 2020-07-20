@@ -28,7 +28,7 @@ export default function NavBar() {
           </Nav.Link>
         </Nav.ListItem>
         <Nav.ListItem>
-          <Nav.Link href="#">
+          <Nav.Link href="#projects">
             <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
             <Nav.LinkText className="link-text">Projects</Nav.LinkText>
           </Nav.Link>
