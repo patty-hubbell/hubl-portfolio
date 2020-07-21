@@ -8,23 +8,16 @@ export default function ProjectContainer({
   gitHubSrc,
   imgSrc,
   imgStyle,
+  containerStyle,
   textAlign = "right",
   title,
 }) {
   return (
-    <Project.Container>
+    <Project.Container style={containerStyle}>
       {textAlign === "right" && <img src={imgSrc} style={imgStyle} />}
       <Project.TextContainer>
         <Project.Title>{title}</Project.Title>
-        <Project.Description>
-          After the postoperative check at the clinic, Molly took him to the
-          simple Chinese hollow points Shin had sold him. Now this quiet
-          courtyard, Sunday afternoon, this girl with a random collection of
-          European furniture, as though Deane had once intended to use the place
-          as his home. All the speed he took, all the turns he’d taken and the
-          corners he’d cut in Night City, and still he’d see the matrix in his
-          jacket pocket.
-        </Project.Description>
+        <Project.Description>{children}</Project.Description>
         <Project.GitHubButton>
           <Project.GitHubLink href={gitHubSrc} target="_blank">
             <FontAwesomeIcon
@@ -46,6 +39,7 @@ const Project = {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin-top: 2rem;
     width: 80%;
   `,
   TextContainer: styled.div`
