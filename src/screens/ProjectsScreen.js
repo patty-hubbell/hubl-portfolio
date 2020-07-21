@@ -4,12 +4,12 @@ import ProjectContainer from "../components/ProjectContainer"
 
 export default function ProjectsScreen() {
   return (
-    <Projects.Container id="projects">
+    <Projects.Container className="projects-screen" id="projects">
       <Projects.Title>Personal Projects</Projects.Title>
       <ProjectContainer
         gitHubSrc="https://github.com/pat-hubbell/YourReader"
         imgSrc={require("../../static/project1.svg")}
-        imgStyle={{ width: "24rem" }}
+        imgStyle={{ marginRight: "5rem", width: "24rem" }}
         title="Your Reader Mobile App"
         textAlign="right"
       >
@@ -25,7 +25,7 @@ export default function ProjectsScreen() {
         containerStyle={{ marginTop: "5rem" }}
         gitHubSrc="https://github.com/pat-hubbell/hubl-portfolio"
         imgSrc={require("../../static/project2.svg")}
-        imgStyle={{ width: "24rem" }}
+        imgStyle={{ marginLeft: "5rem", width: "24rem" }}
         title="Hubl.dev Personal Portfolio Website"
         textAlign="left"
       >
@@ -46,7 +46,6 @@ const Projects = {
     background-color: var(--black);
     display: flex;
     flex-direction: column;
-    margin-left: 5rem;
     padding-bottom: 10rem;
   `,
   Title: styled.h1`

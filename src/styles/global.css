@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Sora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Ubuntu&display=swap");
 
 :root {
   font-size: 16px;
-  font-family: "Noto Sans", sans-serif;
+  font-family: var(--text-font);
   --background: #003d5b;
   --primary: #30638e;
   --secondary: #00798c;
@@ -14,7 +14,7 @@
   --dark-opaque: rgba(53, 53, 53, 0.7);
   --black: #202020;
   --title-font: "Do Hyeon", sans-serif;
-  --text-font: "Sora", sans-serif;
+  --text-font: "Ubuntu", sans-serif;
 }
 
 body {
@@ -43,7 +43,9 @@ body {
 /* Large screens */
 @media only screen and (min-width: 600px) {
   .intro-screen,
-  .about-screen {
+  .about-screen,
+  .projects-screen,
+  .footer {
     margin-left: 5rem;
   }
 }
@@ -103,7 +105,7 @@ body {
 
 .screen-name {
   color: var(--white);
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   margin: 0;
   padding: 0;
   white-space: nowrap;
@@ -111,14 +113,12 @@ body {
 
 .screen-title {
   color: var(--light);
-  font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
 
 .screen-school {
   color: var(--warm);
-  font-family: "Noto Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -127,7 +127,7 @@ body {
   background-color: var(--primary);
   border-radius: 25px;
   display: flex;
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   transition: 200ms ease;
   white-space: nowrap;
 }
@@ -366,7 +366,7 @@ body {
 
 .about-title {
   color: var(--white);
-  font-family: "Do Hyeon", sans-serif;
+  font-family: var(--title-font);
   margin: 0;
   margin-right: 3rem;
   padding: 0;
@@ -406,7 +406,7 @@ body {
     rgba(48, 99, 142, 1) 100%
   );
   height: 0.4rem;
-  width: 95%;
+  width: 90%;
 }
 
 .about-bar-top {
