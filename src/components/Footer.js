@@ -9,10 +9,7 @@ export default function Footer() {
       <Foot.Bar />
       <Foot.Text>Patrick Hubbell 2020</Foot.Text>
       <Foot.Contact>
-        <FontAwesomeIcon
-          icon={faEnvelope}
-          style={{ filter: "opacity(0.5)", marginRight: "0.5rem" }}
-        />
+        <Foot.Icon icon={faEnvelope} />
         <Foot.Text>hubbell.64@osu.edu</Foot.Text>
       </Foot.Contact>
     </Foot.Container>
@@ -42,5 +39,9 @@ const Foot = {
   `,
   Contact: styled.div`
     display: flex;
+  `,
+  Icon: styled(FontAwesomeIcon)`
+    filter: opacity(0.5);
+    margin-right: 0.5rem;
   `,
 }
