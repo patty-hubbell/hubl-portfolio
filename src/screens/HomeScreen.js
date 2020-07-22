@@ -21,7 +21,11 @@ export default function HomeScreen() {
             The Ohio State University
           </Home.School>
           <Home.ConnectButton className="screen-connect-button">
-            <a href="https://linkedin.com/in/patrick-hubbell" target="_blank">
+            <a
+              href="https://linkedin.com/in/patrick-hubbell"
+              rel="noreferrer"
+              target="_blank"
+            >
               Connect With Me
             </a>
           </Home.ConnectButton>

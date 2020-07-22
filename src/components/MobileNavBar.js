@@ -69,7 +69,11 @@ export default function MobileNavBar() {
           </MobileNav.ScrollLink>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="https://github.com/pat-hubbell" target="_blank">
+          <MobileNav.Link
+            href="https://github.com/pat-hubbell"
+            rel="noreferrer"
+            target="_blank"
+          >
             <MobileNav.Icon icon={faGithub} />
             <MobileNav.LinkText className="link-text">
               GitHub
@@ -79,6 +83,7 @@ export default function MobileNavBar() {
         <MobileNav.ListItem>
           <MobileNav.Link
             href="https://linkedin.com/in/patrick-hubbell"
+            rel="noreferrer"
             target="_blank"
           >
             <MobileNav.Icon icon={faLinkedin} />

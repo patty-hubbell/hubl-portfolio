@@ -5,10 +5,12 @@ export default function TransitionImage() {
   return (
     <Image.Container>
       <Image.Real
+        alt="Real Profile Picture"
         className="about-real-pic"
         src={require("../assets/profile.jpg")}
       />
       <Image.Cartoon
+        alt="Cartoon Profile Picture"
         className="about-cartoon-pic"
         src={require("../assets/cartoon-profile.png")}
       />

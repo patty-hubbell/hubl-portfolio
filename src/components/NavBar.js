@@ -53,7 +53,11 @@ export default function NavBar() {
           </Nav.ScrollLink>
         </Nav.ListItem>
         <Nav.ListItem>
-          <Nav.Link href="https://github.com/pat-hubbell" target="_blank">
+          <Nav.Link
+            href="https://github.com/pat-hubbell"
+            rel="noreferrer"
+            target="_blank"
+          >
             <Nav.Icon icon={faGithub} />
             <Nav.LinkText className="link-text">GitHub</Nav.LinkText>
           </Nav.Link>
@@ -61,6 +65,7 @@ export default function NavBar() {
         <Nav.ListItem>
           <Nav.Link
             href="https://linkedin.com/in/patrick-hubbell"
+            rel="noreferrer"
             target="_blank"
           >
             <Nav.Icon icon={faLinkedin} />

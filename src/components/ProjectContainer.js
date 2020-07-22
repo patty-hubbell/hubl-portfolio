@@ -15,7 +15,7 @@ export default function ProjectContainer({
     <Project.Container className="project-container" style={containerStyle}>
       {textAlign === "right" && (
         <>
-          <img className="project-image" src={imgSrc} />
+          <img alt="" className="project-image" src={imgSrc} />
           <Project.Buffer className="project-buffer" />
         </>
       )}
@@ -37,7 +37,7 @@ export default function ProjectContainer({
       {textAlign === "left" && (
         <>
           <Project.Buffer className="project-buffer" />
-          <img className="project-image" src={imgSrc} />
+          <img alt="" className="project-image" src={imgSrc} />
         </>
       )}
     </Project.Container>
