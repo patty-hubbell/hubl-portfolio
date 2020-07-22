@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 
 import NavBar from "../components/NavBar"
-import IntroScreen from "../screens/IntroScreen"
+import HomeScreen from "../screens/HomeScreen"
 import AboutScreen from "../screens/AboutScreen"
 import ScreenFlexContainer from "../components/ScreenFlexContainer"
 import MobileNavBar from "../components/MobileNavBar"
@@ -24,13 +24,13 @@ export default function Home() {
     return () => window.removeEventListener("resize", handleResize)
   }, [])
 
-  const isMobile = windowDimension <= 600
+  const isMobile = windowDimension <= 675
 
   return (
     <>
       {isMobile ? <MobileNavBar /> : <NavBar />}
       <ScreenFlexContainer>
-        <IntroScreen />
+        <HomeScreen />
         <AboutScreen />
         <ProjectsScreen />
         <Footer />

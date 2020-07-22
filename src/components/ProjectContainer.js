@@ -7,28 +7,39 @@ export default function ProjectContainer({
   children,
   gitHubSrc,
   imgSrc,
-  imgStyle,
   containerStyle,
   textAlign = "right",
   title,
 }) {
   return (
-    <Project.Container style={containerStyle}>
-      {textAlign === "right" && <img src={imgSrc} style={imgStyle} />}
+    <Project.Container className="project-container" style={containerStyle}>
+      {textAlign === "right" && (
+        <>
+          <img className="project-image" src={imgSrc} />
+          <Project.Buffer className="project-buffer" />
+        </>
+      )}
       <Project.TextContainer>
-        <Project.Title>{title}</Project.Title>
-        <Project.Description>{children}</Project.Description>
-        <Project.GitHubButton>
+        <Project.Title className="project-title">{title}</Project.Title>
+        <Project.Description className="project-description">
+          {children}
+        </Project.Description>
+        <Project.GitHubButton className="project-github-button">
           <Project.GitHubLink href={gitHubSrc} target="_blank">
             <FontAwesomeIcon
               icon={faGithub}
-              style={{ fontSize: "1.2rem", marginRight: "0.5rem" }}
+              style={{ marginRight: "0.5rem" }}
             />
             Check out the source code!
           </Project.GitHubLink>
         </Project.GitHubButton>
       </Project.TextContainer>
-      {textAlign === "left" && <img src={imgSrc} style={imgStyle} />}
+      {textAlign === "left" && (
+        <>
+          <Project.Buffer className="project-buffer" />
+          <img className="project-image" src={imgSrc} />
+        </>
+      )}
     </Project.Container>
   )
 }
@@ -39,8 +50,9 @@ const Project = {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 2rem;
-    width: 80%;
+  `,
+  Buffer: styled.div`
+    height: 1rem;
   `,
   TextContainer: styled.div`
     display: flex;
@@ -53,23 +65,20 @@ const Project = {
       rgba(237, 174, 73, 1) 100%
     );
     font-family: var(--title-font);
-    font-size: 2rem;
     margin: 0;
     padding: 0;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    white-space: nowrap;
   `,
   Description: styled.p`
     color: var(--white);
     font-family: var(--text-font);
-    font-size: 1.2rem;
   `,
   GitHubButton: styled.div`
     align-items: center;
     display: flex;
     flex-direction: row;
-    height: 3rem;
-    width: 15rem;
   `,
   GitHubLink: styled.a`
     color: var(--warm);

@@ -5,11 +5,12 @@ import ProjectContainer from "../components/ProjectContainer"
 export default function ProjectsScreen() {
   return (
     <Projects.Container className="projects-screen" id="projects">
-      <Projects.Title>Personal Projects</Projects.Title>
+      <Projects.Title className="projects-screen-title">
+        Personal Projects
+      </Projects.Title>
       <ProjectContainer
         gitHubSrc="https://github.com/pat-hubbell/YourReader"
         imgSrc={require("../../static/project1.svg")}
-        imgStyle={{ marginRight: "5rem", width: "24rem" }}
         title="Your Reader Mobile App"
         textAlign="right"
       >
@@ -22,11 +23,9 @@ export default function ProjectsScreen() {
         Image Picker.
       </ProjectContainer>
       <ProjectContainer
-        containerStyle={{ marginTop: "5rem" }}
         gitHubSrc="https://github.com/pat-hubbell/hubl-portfolio"
         imgSrc={require("../../static/project2.svg")}
-        imgStyle={{ marginLeft: "5rem", width: "24rem" }}
-        title="Hubl.dev Personal Portfolio Website"
+        title="Personal Portfolio Website"
         textAlign="left"
       >
         I began making this personal portfolio website in order to gain more web
@@ -46,11 +45,11 @@ const Projects = {
     background-color: var(--black);
     display: flex;
     flex-direction: column;
-    padding-bottom: 10rem;
+    padding-bottom: 4rem;
   `,
   Title: styled.h1`
     color: var(--white);
     font-family: var(--title-font);
-    font-size: 3rem;
+    white-space: nowrap;
   `,
 }

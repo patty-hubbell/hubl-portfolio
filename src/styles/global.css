@@ -1,5 +1,7 @@
+/* Import fonts from Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Ubuntu&display=swap");
 
+/* Set default font size, default font family, and CSS variables */
 :root {
   font-size: 16px;
   font-family: var(--text-font);
@@ -17,32 +19,15 @@
   --text-font: "Ubuntu", sans-serif;
 }
 
+/* Remove default margin and padding */
 body {
   margin: 0;
   padding: 0;
 }
 
-.screen-flex-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.intro-screen {
-  background: rgb(48, 99, 142);
-  background: linear-gradient(
-    135deg,
-    rgba(48, 99, 142, 1) 0%,
-    rgba(0, 61, 91, 1) 35%,
-    rgba(0, 28, 42, 1) 100%
-  );
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-
-/* Large screens */
-@media only screen and (min-width: 600px) {
-  .intro-screen,
+/* If the device screen is large, make room for the desktop browser navbar */
+@media only screen and (min-width: 675px) {
+  .home-screen,
   .about-screen,
   .projects-screen,
   .footer {
@@ -50,95 +35,20 @@ body {
   }
 }
 
-.icon {
-  color: var(--light);
-  font-size: 1.5rem;
-  min-width: 2rem;
-  margin: 0 1.5rem;
-}
-
-.hamburger {
-  color: var(--white);
-  font-size: 1.5rem;
-}
-
-.mobile-icon {
-  color: var(--white);
-  font-size: 1.5rem;
-}
-
-.screen {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-}
-
-.screen-bar {
-  align-items: center;
-  background-color: var(--primary);
-  border-top-left-radius: 7px;
-  border-top-right-radius: 7px;
-  display: flex;
-  min-height: 2rem;
-  justify-content: flex-start;
-  margin-top: 0;
-  width: 100%;
-}
-
-.screen-text-area {
-  align-items: center;
-  background-color: var(--dark-opaque);
-  border-bottom-left-radius: 7px;
-  border-bottom-right-radius: 7px;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  justify-content: center;
-  width: 100%;
-}
-
-.screen-name,
-.screen-title,
-.screen-school {
-  text-align: center;
-}
-
-.screen-name {
-  color: var(--white);
-  font-family: var(--title-font);
-  margin: 0;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.screen-title {
-  color: var(--light);
-  margin: 0;
-  padding: 0;
-}
-
-.screen-school {
-  color: var(--warm);
-  margin: 0;
-  padding: 0;
-}
-
-.screen-connect-button {
-  background-color: var(--primary);
-  border-radius: 25px;
-  display: flex;
-  font-family: var(--title-font);
-  transition: 200ms ease;
-  white-space: nowrap;
-}
-
-/* Extra small screens */
+/* Resize UI elements for extra small screens */
 @media only screen and (max-width: 399px) {
-  .intro-screen,
+  .home-screen,
   .about-screen {
     height: calc(100vh - 3rem);
   }
 
+  .footer {
+    margin-bottom: 3rem;
+  }
+
+  /* ------------------
+    Home Screen elements
+     ------------------ */
   .screen {
     height: 20rem;
     width: 90%;
@@ -157,9 +67,9 @@ body {
     font-size: 1rem;
   }
 
-  .about-screen {
-    margin-bottom: 3rem;
-  }
+  /* ------------------
+    About Screen elements
+     ------------------ */
 
   .about-real-pic,
   .about-cartoon-pic {
@@ -171,7 +81,7 @@ body {
   }
 
   .about-title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .about-bar-top {
@@ -181,15 +91,51 @@ body {
   .about-bar-bottom {
     margin-top: 1rem;
   }
+
+  /* ------------------
+    Projects Screen elements
+     ------------------ */
+  .project-container {
+    width: 90%;
+  }
+
+  .projects-screen-title {
+    font-size: 1.7rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.7rem;
+  }
+
+  .project-image {
+    width: 7rem;
+  }
+
+  .project-buffer {
+    min-width: 0.7rem;
+  }
+
+  .project-github-button {
+    height: 3rem;
+    font-size: 0.7rem;
+    width: 10rem;
+  }
 }
 
-/* Small screens */
-@media only screen and (min-width: 400px) and (max-width: 599px) {
-  .intro-screen,
+/* Resize UI elements for small screens */
+@media only screen and (min-width: 400px) and (max-width: 674px) {
+  .home-screen,
   .about-screen {
     height: calc(100vh - 3rem);
   }
 
+  /* ------------------
+    Home Screen elements
+     ------------------ */
   .screen {
     height: 20rem;
     width: 75%;
@@ -208,9 +154,9 @@ body {
     font-size: 1.2rem;
   }
 
-  .about-screen {
-    margin-bottom: 3rem;
-  }
+  /* ------------------
+    About Screen elements
+     ------------------ */
 
   .about-real-pic,
   .about-cartoon-pic {
@@ -218,7 +164,7 @@ body {
   }
 
   .about-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .about-text {
@@ -232,15 +178,56 @@ body {
   .about-bar-bottom {
     margin-top: 2rem;
   }
+
+  /* ------------------
+    Projects Screen elements
+     ------------------ */
+  .project-container {
+    margin-bottom: 2.5rem;
+    width: 90%;
+  }
+
+  .projects-screen-title {
+    font-size: 2rem;
+  }
+
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .project-description {
+    font-size: 0.8rem;
+  }
+
+  .project-image {
+    width: 10rem;
+  }
+
+  .project-buffer {
+    min-width: 1rem;
+  }
+
+  .project-github-button {
+    height: 3rem;
+    font-size: 0.8rem;
+    max-width: 12rem;
+  }
 }
 
-/* Medium screens */
-@media only screen and (min-width: 600px) and (max-width: 899px) {
+/* Resize UI elements for medium screens */
+@media only screen and (min-width: 675px) and (max-width: 899px) {
   .screen {
     height: 25rem;
     width: 75%;
   }
 
+  .footer {
+    margin-bottom: 3rem;
+  }
+
+  /* ------------------
+    Home Screen elements
+     ------------------ */
   .screen-connect-button {
     font-size: 1.2rem;
     height: 3rem;
@@ -255,8 +242,11 @@ body {
     font-size: 1.5rem;
   }
 
+  /* ------------------
+    About Screen elements
+     ------------------ */
   .about-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .about-text {
@@ -270,10 +260,47 @@ body {
   .about-bar-bottom {
     margin-top: 2.3rem;
   }
+
+  /* ------------------
+    Projects Screen elements
+     ------------------ */
+  .project-container {
+    margin-bottom: 3.5rem;
+    width: 80%;
+  }
+
+  .projects-screen-title {
+    font-size: 2.5rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+  }
+
+  .project-image {
+    width: 15rem;
+  }
+
+  .project-buffer {
+    min-width: 3rem;
+  }
+
+  .project-github-button {
+    height: 3rem;
+    font-size: 0.9rem;
+    width: 14rem;
+  }
 }
 
-/* Large screens */
+/* Resize UI elements for large screens */
 @media only screen and (min-width: 900px) {
+  /* ------------------
+    Home Screen elements
+     ------------------ */
   .screen {
     height: 30rem;
     width: 65%;
@@ -293,126 +320,39 @@ body {
     font-size: 2rem;
   }
 
+  /* ------------------
+    About Screen elements
+     ------------------ */
   .about-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
-}
 
-.screen-connect-button a {
-  color: var(--white);
-  margin: auto;
-  text-decoration: none;
-}
+  /* ------------------
+    Projects Screen elements
+     ------------------ */
+  .project-container {
+    margin-bottom: 4rem;
+    width: 75%;
+  }
 
-.screen-connect-button:hover {
-  background-color: var(--secondary);
-}
+  .projects-screen-title {
+    font-size: 3rem;
+  }
 
-.button-exit,
-.button-min,
-.button-max {
-  border-radius: 50%;
-  height: 1rem;
-  margin-right: 0.5rem;
-  width: 1rem;
-}
+  .project-title {
+    font-size: 1.5rem;
+  }
 
-.button-exit {
-  background-color: var(--warm);
-  margin-left: 0.5rem;
-}
+  .project-image {
+    width: 20rem;
+  }
 
-.button-min {
-  background-color: var(--light);
-}
+  .project-buffer {
+    min-width: 5rem;
+  }
 
-.button-max {
-  background-color: var(--secondary);
-}
-
-.chevron-down {
-  color: var(--white);
-  filter: opacity(0.7);
-  font-size: 3rem;
-  margin: auto;
-}
-
-.about-screen {
-  align-items: center;
-  background-color: var(--black);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 100vh;
-  position: relative;
-}
-
-.about-image-and-title {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.about-text-container {
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}
-
-.about-tech {
-  color: var(--light);
-}
-
-.about-title {
-  color: var(--white);
-  font-family: var(--title-font);
-  margin: 0;
-  margin-right: 3rem;
-  padding: 0;
-  white-space: nowrap;
-}
-
-.about-image {
-  position: relative;
-  margin-right: 3rem;
-}
-
-.about-real-pic {
-  border-radius: 50%;
-  width: 7rem;
-}
-
-.about-cartoon-pic {
-  border-radius: 50%;
-  filter: opacity(0);
-  left: 0;
-  position: absolute;
-  width: 7rem;
-  transition: 500ms ease;
-}
-
-.about-cartoon-pic:hover {
-  filter: opacity(1);
-}
-
-.about-bar-top,
-.about-bar-bottom {
-  background: rgb(237, 174, 73);
-  background: linear-gradient(
-    90deg,
-    rgba(237, 174, 73, 1) 0%,
-    rgba(0, 121, 140, 1) 70%,
-    rgba(48, 99, 142, 1) 100%
-  );
-  height: 0.4rem;
-  width: 90%;
-}
-
-.about-bar-top {
-  margin-bottom: 3rem;
-}
-
-.about-bar-bottom {
-  margin-top: 3rem;
+  .project-github-button {
+    height: 3rem;
+    width: 14rem;
+  }
 }

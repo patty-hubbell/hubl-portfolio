@@ -8,6 +8,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 const handleClick = () => {
   var links = document.getElementById("links")
@@ -26,32 +27,50 @@ export default function MobileNavBar() {
     <MobileNav.Container>
       <MobileNav.Logo>hubl</MobileNav.Logo>
       <MobileNav.Button onClick={handleClick}>
-        <FontAwesomeIcon className="hamburger" icon={faBars} />
+        <MobileNav.Hamburger icon={faBars} />
       </MobileNav.Button>
       <MobileNav.List id="links">
         <MobileNav.ListItem>
-          <MobileNav.Link href="#home">
-            <FontAwesomeIcon className="mobile-icon" icon={faHome} />
+          <MobileNav.ScrollLink
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <MobileNav.Icon icon={faHome} />
             <MobileNav.LinkText className="link-text">Home</MobileNav.LinkText>
-          </MobileNav.Link>
+          </MobileNav.ScrollLink>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#about">
-            <FontAwesomeIcon className="mobile-icon" icon={faAddressCard} />
+          <MobileNav.ScrollLink
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <MobileNav.Icon icon={faAddressCard} />
             <MobileNav.LinkText className="link-text">About</MobileNav.LinkText>
-          </MobileNav.Link>
+          </MobileNav.ScrollLink>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
-          <MobileNav.Link href="#">
-            <FontAwesomeIcon className="mobile-icon" icon={faProjectDiagram} />
+          <MobileNav.ScrollLink
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <MobileNav.Icon icon={faProjectDiagram} />
             <MobileNav.LinkText className="link-text">
               Projects
             </MobileNav.LinkText>
-          </MobileNav.Link>
+          </MobileNav.ScrollLink>
         </MobileNav.ListItem>
         <MobileNav.ListItem>
           <MobileNav.Link href="https://github.com/pat-hubbell" target="_blank">
-            <FontAwesomeIcon className="mobile-icon" icon={faGithub} />
+            <MobileNav.Icon icon={faGithub} />
             <MobileNav.LinkText className="link-text">
               GitHub
             </MobileNav.LinkText>
@@ -62,7 +81,7 @@ export default function MobileNavBar() {
             href="https://linkedin.com/in/patrick-hubbell"
             target="_blank"
           >
-            <FontAwesomeIcon className="mobile-icon" icon={faLinkedin} />
+            <MobileNav.Icon icon={faLinkedin} />
             <MobileNav.LinkText className="link-text">
               LinkedIn
             </MobileNav.LinkText>
@@ -101,6 +120,10 @@ const MobileNav = {
     outline: none;
     width: 3rem;
   `,
+  Hamburger: styled(FontAwesomeIcon)`
+    color: var(--white);
+    font-size: 1.5rem;
+  `,
   List: styled.ul`
     background-color: var(--dark);
     border-top-left-radius: 10px;
@@ -122,6 +145,14 @@ const MobileNav = {
   Link: styled.a`
     color: var(--white);
     text-decoration: none;
+  `,
+  ScrollLink: styled(Link)`
+    color: var(--white);
+    text-decoration: none;
+  `,
+  Icon: styled(FontAwesomeIcon)`
+    color: var(--white);
+    font-size: 1.5rem;
   `,
   LinkText: styled.span`
     margin-left: 1.5rem;

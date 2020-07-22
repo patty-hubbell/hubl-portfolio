@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons"
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons"
 import styled from "styled-components"
+import { Link, animateScroll as scroll } from "react-scroll"
 
 export default function NavBar() {
   return (
@@ -16,26 +17,44 @@ export default function NavBar() {
           <Nav.Logo>hubl</Nav.Logo>
         </Nav.ListItem>
         <Nav.ListItem>
-          <Nav.Link href="#home">
-            <FontAwesomeIcon className="icon" icon={faHome} />
+          <Nav.ScrollLink
+            activeClass="active"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <Nav.Icon icon={faHome} />
             <Nav.LinkText className="link-text">Home</Nav.LinkText>
-          </Nav.Link>
+          </Nav.ScrollLink>
         </Nav.ListItem>
         <Nav.ListItem>
-          <Nav.Link href="#about">
-            <FontAwesomeIcon className="icon" icon={faAddressCard} />
+          <Nav.ScrollLink
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <Nav.Icon icon={faAddressCard} />
             <Nav.LinkText className="link-text">About</Nav.LinkText>
-          </Nav.Link>
+          </Nav.ScrollLink>
         </Nav.ListItem>
         <Nav.ListItem>
-          <Nav.Link href="#projects">
-            <FontAwesomeIcon className="icon" icon={faProjectDiagram} />
+          <Nav.ScrollLink
+            activeClass="active"
+            to="projects"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            <Nav.Icon icon={faProjectDiagram} />
             <Nav.LinkText className="link-text">Projects</Nav.LinkText>
-          </Nav.Link>
+          </Nav.ScrollLink>
         </Nav.ListItem>
         <Nav.ListItem>
           <Nav.Link href="https://github.com/pat-hubbell" target="_blank">
-            <FontAwesomeIcon className="icon" icon={faGithub} />
+            <Nav.Icon icon={faGithub} />
             <Nav.LinkText className="link-text">GitHub</Nav.LinkText>
           </Nav.Link>
         </Nav.ListItem>
@@ -44,7 +63,7 @@ export default function NavBar() {
             href="https://linkedin.com/in/patrick-hubbell"
             target="_blank"
           >
-            <FontAwesomeIcon className="icon" icon={faLinkedin} />
+            <Nav.Icon icon={faLinkedin} />
             <Nav.LinkText className="link-text">LinkedIn</Nav.LinkText>
           </Nav.Link>
         </Nav.ListItem>
@@ -106,6 +125,26 @@ const Nav = {
       background-color: var(--dark-hover);
       filter: grayscale(0%) opacity(1);
     }
+  `,
+  ScrollLink: styled(Link)`
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 500ms;
+
+    &:hover {
+      background-color: var(--dark-hover);
+      filter: grayscale(0%) opacity(1);
+    }
+  `,
+  Icon: styled(FontAwesomeIcon)`
+    color: var(--light);
+    font-size: 1.5rem;
+    min-width: 2rem;
+    margin: 0 1.5rem;
   `,
   LinkText: styled.span`
     color: var(--light);
