@@ -9,7 +9,7 @@ export default function ProjectsScreen() {
         Personal Projects
       </Projects.Title>
       <ProjectContainer
-        gitHubSrc="https://github.com/pat-hubbell/YourReader"
+        gitHubSrc="https://github.com/pat-hubbell/your-reader"
         imgSrc={require("../../static/project1.svg")}
         title="Your Reader Mobile App"
         textAlign="right"
