@@ -23,10 +23,33 @@ export default function ProjectsScreen() {
         Image Picker.
       </ProjectContainer>
       <ProjectContainer
-        gitHubSrc="https://github.com/pat-hubbell/hubl-portfolio"
+        gitHubSrc="https://github.com/pat-hubbell/vast-views"
         imgSrc={require("../../static/project2.svg")}
-        title="Personal Portfolio Website"
+        title="Vast Views Web App"
         textAlign="left"
+      >
+        The Vast Views web application allows the user to see a vast array of
+        nature images fetched from the Unsplash API. I began this project to
+        serve as a good foundation where I could continually add modern features
+        over time. Currently, I have implemented an infinite scroll feature,
+        similar to what you can find on social media websites. I've also
+        implemented a light and dark theme toggle, and an image filter to allow
+        the user to pick the orientation of the images that are fetched from the
+        API.{" "}
+        <span>
+          <Projects.VastViewsLink
+            href="http://vastviews.herokuapp.com"
+            target="_blank"
+          >
+            Check out Vast Views!
+          </Projects.VastViewsLink>
+        </span>
+      </ProjectContainer>
+      <ProjectContainer
+        gitHubSrc="https://github.com/pat-hubbell/hubl-portfolio"
+        imgSrc={require("../../static/project3.svg")}
+        title="Personal Portfolio Website"
+        textAlign="right"
       >
         I began making this personal portfolio website in order to gain more web
         development experience, to learn more about React, and to experiment
@@ -51,5 +74,14 @@ const Projects = {
     color: var(--white);
     font-family: var(--title-font);
     white-space: nowrap;
+  `,
+  VastViewsLink: styled.a`
+    color: var(--light);
+    text-decoration: none;
+    transition: 500ms ease;
+
+    &:hover {
+      color: var(--warm);
+    }
   `,
 }
